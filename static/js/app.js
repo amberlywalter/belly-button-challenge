@@ -49,8 +49,8 @@ function buildChartInfo(id) {
         let result = sample_values.find(sampleObj => sampleObj.id == id);
 
         let otu_ids = result.otu_ids;
-        let otu_labels = result.otu_labels.slice(0, 10).reverse();
-        let sample = result.sample_values.slice(0, 10).reverse();
+        let otu_labels = result.otu_labels.slice(0, 10);
+        let sample = result.sample_values.slice(0, 10);
 
         let Y_labels = otu_ids.slice(0, 10).map(id => `OTU ${id}`);
         console.log("Y-labels:", Y_labels);
